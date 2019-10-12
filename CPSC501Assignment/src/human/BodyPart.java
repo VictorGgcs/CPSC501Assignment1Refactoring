@@ -1,18 +1,18 @@
 package human;
 
-public abstract class BodyPart {
-	int Life;
-	int Energy;
+public class BodyPart {
+	int life;
+	int energy;
 	//Other attributes
 	
 	
 	
 	
 	public int Life(){
-		return Life;
+		return this.life;
 	}
 	public int Energy() {
-		return Energy;
+		return this.energy;
 	}
 	
 	

@@ -1,20 +1,12 @@
 package human;
 
-public class ArmLeft extends BodyPart {
+public class ArmLeft extends Arm {
 	
-	int energy;
-	int life;
 	
 	
 	public ArmLeft() {
 		energy = 100;
 		life = 100;
-	}
-	
-	public void punch() {
-		this.energy -= 10;
-		this.life += 10;
-		System.out.println("Punch! You feel weaker");
 	}
 	
 	

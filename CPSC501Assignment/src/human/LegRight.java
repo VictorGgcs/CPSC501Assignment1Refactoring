@@ -1,10 +1,7 @@
 package human;
 
-public class LegRight extends BodyPart {
+public class LegRight extends Leg {
 
-	
-	int energy;
-	int life;
 	
 	
 	public LegRight() {
@@ -13,10 +10,4 @@ public class LegRight extends BodyPart {
 	}
 	
 	
-	
-	public void kick() {
-		this.energy -= 10;
-		this.life += 10;
-		System.out.println("Kick! You feel weaker");
-	}
 }
