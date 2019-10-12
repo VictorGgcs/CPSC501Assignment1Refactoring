@@ -2,23 +2,21 @@ package human;
 import java.util.Random;
 
 public class Head extends BodyPart {
-	int energy;
-	int life;
 	private Random ran;
 	private String[] posIdea;
 	
 	
 	public Head() {
-		this.energy = 100;
-		System.out.print(this.energy);
-		this.life = 100;
+		this.changeEnergy(100);
+		this.changeLife(100);
 		this.ran = new Random();
 		this.posIdea = new String[] {"Life","Purpose","Food","Work","Pizza","Computers"};
 	}
 	
 	
 	public String think(){
-		this.energy -= 10;
+		this.changeEnergy( this.getEnergy() - 10);
+		
 		String thought = chooseRandomWord();
 		System.out.println("You thought about " + thought);
 		return thought;

@@ -4,8 +4,8 @@ public class ArmRight extends Arm  {
 
 	
 	public ArmRight() {
-		energy = 100;
-		life = 100;
+		this.changeEnergy(100);
+		this.changeLife(100);
 	}
 	
 	

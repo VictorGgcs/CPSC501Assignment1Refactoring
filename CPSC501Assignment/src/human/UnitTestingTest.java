@@ -10,7 +10,7 @@ class UnitTestingTest {
 	void testThinking() {
 		CreateHuman human = new CreateHuman();
 		human.head.think();
-		assertNotEquals(human.head.energy, 100);
+		assertNotEquals(human.head.getEnergy(), 100);
 	}
 	
 	
@@ -26,7 +26,7 @@ class UnitTestingTest {
 	void testPunch() {
 		CreateHuman human = new CreateHuman();
 		human.armLeft.punch();
-		assertEquals(human.armLeft.energy, 90);
+		assertEquals(human.armLeft.getEnergy(), 90);
 	}
 	
 	

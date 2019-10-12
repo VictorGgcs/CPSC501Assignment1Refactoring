@@ -29,7 +29,7 @@ public class MainInteraction {
 		
 		
 		dispOptions();
-		while (human.head.energy > 0) {
+		while (human.head.getEnergy() > 0) {
 			//Cycle through possible options until human dies or quits
 			System.out.println("What would you like to do?");
 			

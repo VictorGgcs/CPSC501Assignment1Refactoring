@@ -1,20 +1,25 @@
 package human;
 
 public class BodyPart {
-	int life;
-	int energy;
+	private int life;
+	private int energy;
 	//Other attributes
 	
 	
-	
-	
-	public int Life(){
+	public int getLife(){
 		return this.life;
 	}
-	public int Energy() {
+	public int getEnergy() {
 		return this.energy;
 	}
 	
 	
+	public void changeLife(int x) {
+		this.life = x;
+	}
+	
+	public void changeEnergy(int x) {
+		this.energy = x;
+	}
 
 }
