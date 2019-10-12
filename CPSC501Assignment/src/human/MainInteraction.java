@@ -19,38 +19,16 @@ public class MainInteraction {
 		//Beginning of IO
 		System.out.println("Welcome to the human simulation");		//Instantiate Human, interract with human
 		System.out.println("...");
-		try {
-			TimeUnit.SECONDS.sleep(3);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		waitSec(3);
 		System.out.println("...");
-		try {
-			TimeUnit.SECONDS.sleep(1);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		waitSec(1);
 		
 		
 		CreateHuman human = new CreateHuman();
 		System.out.println("Human created");
 		
 		
-		System.out.println("Theese are your options:"
-				+ "\n	think"
-				+ "\n	stretch"
-				+ "\n	head think"
-				+ "\n	torso stretch"
-				+ "\n	armleft punch"
-				+ "\n	armright punch"
-				+ "\n	legleft kick"
-				+ "\n	legright kick"
-		);
-		
-		System.out.println(human.head.energy);
-		
+		dispOptions();
 		while (human.head.energy > 0) {
 			//Cycle through possible options until human dies or quits
 			System.out.println("What would you like to do?");
@@ -108,29 +86,41 @@ public class MainInteraction {
 				
 				
 			
-			try {
-				TimeUnit.SECONDS.sleep(1);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			System.out.println("Theese are your options:"
-					+ "\n	think"
-					+ "\n	stretch"
-					+ "\n	head think"
-					+ "\n	torso stretch"
-					+ "\n	armleft punch"
-					+ "\n	armright punch"
-					+ "\n	legleft kick"
-					+ "\n	legright kick"
-			);
-			
+			waitSec(2);
+			dispOptions();
 			
 		}//leaves when head runs out of energy
 		System.out.println("The human is dead. (END)");
-		
-		
-		
+
 	}
+	
+	
+	
+	
+	public static void dispOptions() {
+		System.out.println("Theese are your options:"
+				+ "\n	think"
+				+ "\n	stretch"
+				+ "\n	head think"
+				+ "\n	torso stretch"
+				+ "\n	armleft punch"
+				+ "\n	armright punch"
+				+ "\n	legleft kick"
+				+ "\n	legright kick"
+		);
+	}
+
+	
+	public static void waitSec(int x) {
+		try {
+			TimeUnit.SECONDS.sleep(x);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
 }
 
